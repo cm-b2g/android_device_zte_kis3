@@ -103,8 +103,11 @@ TARGET_RECOVERY_FSTAB := device/zte/kis3/ramdisk/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 
+include vendor/cm/BoardConfig.mk
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+include vendor/cm/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     device/zte/kis3/sepolicy

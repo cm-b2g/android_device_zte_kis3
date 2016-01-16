@@ -19,6 +19,7 @@ DEVICE_PACKAGE_OVERLAYS += device/zte/kis3/overlay
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/zte/kis3/kis3-vendor.mk)
+$(call inherit-product-if-exists, vendor/cm/config/common_full.mk)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -139,3 +140,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+
+GAIA_DEV_PIXELS_PER_PX := 1.5
+BOOTANIMATION_ASSET_SIZE := fwvga
+
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := kis3
+PRODUCT_NAME := full_kis3
+PRODUCT_BRAND := ZTE
+PRODUCT_MODEL := Kis 3
+PRODUCT_MANUFACTURER := ZTE
+PRODUCT_RELEASE_NAME := Kis 3
